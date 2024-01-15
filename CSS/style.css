@@ -18,9 +18,21 @@ body {
     min-height: 200px;
 }
 
+.primary-btn {
+    font-size: 1.25rem;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Mulish';
+    font-weight: 800;
+    border-radius: 8px;
+    background: #FF5400;
+    height: 52px;
+    border: none;
+}
+
 /* header section styles */
 header {
-    padding: 52px 135px 0;
+    padding: 52px 135px 100px;
 }
 
 /* nav section styles */
@@ -28,6 +40,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 49px;
 
 }
 
@@ -83,4 +96,151 @@ nav {
 .menubar-section .home {
     color: #FF5400;
     font-weight: 700;
+}
+
+/* banner section styles */
+.banner-section {
+    background: linear-gradient(180deg,
+            rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00)100%),
+        url('../Images/Group\ 13\ \(1\)\ \(1\).png') no-repeat;
+    background-size: 100%;
+    height: 500px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 106px 0;
+
+}
+
+.banner-details h1 {
+    color: #FFF;
+    font-family: 'Mulish';
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.banner-details p {
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Mulish';
+    font-weight: 400;
+    line-height: 1.625rem;
+    max-width: 676px;
+    margin-top: 24px;
+}
+
+.banner-form {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    max-width: 800px;
+    min-height: 84px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.banner-form input {
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.banner-form .select input {
+    width: 80%;
+}
+
+.banner-form .input {
+    width: 174px;
+    height: 52px;
+    border-radius: 8px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+
+}
+
+.banner-form .input img {
+    height: 24px;
+    width: 24px;
+    margin-right: 14px;
+}
+
+.banner-form .find-now {
+    font-size: 1rem;
+    font-weight: 700;
+    width: 174px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .banner-form,
+    nav {
+
+        flex-direction: column;
+    }
+
+    nav>.menubar-section ul {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+    }
+
+    header {
+        padding: 0 20px;
+    }
+
+    .logo-section,
+    .menubar-section {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .banner-section {
+        background: linear-gradient(180deg,
+                rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00)100%),
+            url('../Images/Group\ 13\ \(1\)\ \(1\).png') no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        width: 100%;
+        min-height: 600px;
+        padding: 35px 15px;
+
+
+
+    }
+
+    .banner-details h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-form {
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .banner-form .input,
+    .banner-form .find-now {
+        min-width: 100%;
+
+    }
 }
