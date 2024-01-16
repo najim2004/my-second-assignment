@@ -591,8 +591,8 @@ footer hr {
         display: none;
 
     }
-    .logo-section .logo-text{
-        font-size: 2rem;
+    .logo-section .logo-text, .logo-section .journey{
+        font-size: 1.5rem;
     }
 
     .banner-section {
@@ -620,7 +620,7 @@ footer hr {
     .banner-form .find-now,
     select,
     .newsletter-img,
-    .newsletter-form {
+    .newsletter-form, .footer-logo {
         min-width: 100%;
 
     }
