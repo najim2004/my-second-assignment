@@ -555,14 +555,50 @@ footer hr {
 }
 
 /* some reviews section styles */
-.reviews-container{
+.reviews-container {
     margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
 
+.r-card {
+    min-height: 300px;
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    border-radius: 30px;
+}
 
+.r-card .box {
+    width: calc(80% - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
 
+.r-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid skyblue;
+}
 
+.r-btn{
+    min-width: 70%;
+}
 
 
 
@@ -581,7 +617,7 @@ footer hr {
 
     .banner-form,
     .tours-section,
-    .newsletter-container {
+    .newsletter-container,.r-card{
 
         flex-direction: column;
         margin-bottom: 24px;
@@ -667,12 +703,12 @@ footer hr {
     .tours-details,
     .choose-us-container,
     .newsletter-img,
-    footer hr {
+    footer hr, .reviews-container {
         margin-top: 24px;
     }
 
     .choose-us-container,
-    footer hr {
+    footer hr,.reviews-container {
         margin-bottom: 24px;
     }
 
@@ -750,5 +786,10 @@ footer hr {
 
     .social {
         margin-top: 16px;
+    }
+    .r-card .box{
+        width: 100%;
+        align-items: center;
+        text-align: center;
     }
 }
