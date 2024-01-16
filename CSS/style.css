@@ -11,12 +11,12 @@
 }
 
 /* body styles */
-body {
+header,
+main {
     max-width: 1440px;
     margin: 0 auto;
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
     min-height: 200px;
-
 }
 
 .primary-btn {
@@ -102,8 +102,15 @@ nav {
 
 .menubar-section {
     width: 47%;
-    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
 
+}
+
+.hamburger {
+    display: none;
+    min-height: 25px;
+    min-width: 25px;
 }
 
 .menubar-section ul {
@@ -485,18 +492,58 @@ main {
 }
 
 /* footer section styles */
+footer {
+    background: rgba(19, 19, 24, 0.05);
+    min-height: 500px;
+    padding: 110px 284px;
+    margin-top: 100px;
+}
+
+.footer-logo {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-details,
+.footer-details p {
+    text-align: center;
+
+}
+
+.social {
+    margin-top: 36px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a {
+    font-size: 22px;
+    color: #131318;
+
+
+}
+
+footer hr {
+    height: 1px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.all-rights p {
+    color: #131318;
+    font-weight: 300;
+    text-align: center;
+}
 
 
 
 
 
-
-
-
-
-
-
-
+/* responsive for mobile */
 
 @media screen and (max-width: 600px) {
 
@@ -505,8 +552,8 @@ main {
     }
 
     .banner-form,
-    nav,
-    .tours-section, .newsletter-container{
+    .tours-section,
+    .newsletter-container {
 
         flex-direction: column;
         margin-bottom: 24px;
@@ -518,12 +565,35 @@ main {
         padding: 0 20px;
     }
 
-    .logo-section,
-    .menubar-section {
-        width: 100%;
+    .logo-section {
+        width: 78%;
         justify-content: center;
         text-align: center;
         margin-top: 20px;
+    }
+    
+    .menubar-section{
+        width: 20%;
+    }
+    nav {
+        margin-bottom: 24px;
+        position: relative;
+        padding: 0 20px;
+
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+    }
+
+    nav>.menubar-section ul {
+        display: none;
+
+    }
+    .logo-section .logo-text{
+        font-size: 2rem;
     }
 
     .banner-section {
@@ -542,24 +612,30 @@ main {
 
     .banner-form,
     .tours-img,
-    .tours-details{
+    .tours-details {
         min-width: 100%;
         height: 100%;
     }
 
     .banner-form .input,
     .banner-form .find-now,
-    select,.newsletter-img, .newsletter-form {
+    select,
+    .newsletter-img,
+    .newsletter-form {
         min-width: 100%;
 
     }
 
     .tours-img,
     .tours-details,
-    .choose-us-container,.newsletter-img {
+    .choose-us-container,
+    .newsletter-img,
+    footer hr {
         margin-top: 24px;
     }
-    .choose-us-container{
+
+    .choose-us-container,
+    footer hr {
         margin-bottom: 24px;
     }
 
@@ -614,13 +690,8 @@ main {
         grid-row: 7/span 1;
     }
 
-    nav>.menubar-section ul {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
 
-    }
+
 
     .destination-details p {
         margin: 24px 20px 16px;
@@ -630,5 +701,16 @@ main {
         flex-basis: 100%;
         width: 100%;
         height: 290px;
+    }
+
+    footer {
+        background: rgba(19, 19, 24, 0.05);
+        min-height: 350px;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    .social {
+        margin-top: 16px;
     }
 }
